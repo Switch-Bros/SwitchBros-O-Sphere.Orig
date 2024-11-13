@@ -70,7 +70,7 @@ dist-no-debug: package3 $(CURRENT_DIRECTORY)/$(ATMOSPHERE_OUT_DIR)
 	cp ../SwitchBros_BasisPaket/bootloader/update.bin $(DIST_DIR)/atmosphere/reboot_payload.bin
 	cp fusee/$(ATMOSPHERE_BOOT_OUT_DIR)/fusee.bin $(DIST_DIR)/bootloader/payloads/fusee.bin
 	#cd $(DIST_DIR); ls; rm -rf ../atmosphere-$(ATMOSPHERE_VERSION).zip; ls
-	cd $(DIST_DIR); zip -r ../atmosphere-$(ATMOSPHERE_VERSION).zip ./*; cd ../;
+	cd $(DIST_DIR); zip -qr ../atmosphere-$(ATMOSPHERE_VERSION).zip ./*; cd ../;
 	cd $(DIST_DIR); zip -r ../SwitchBros-O-Sphere-$(ATMOSPHERE_VERSION)+hbl-2.4.4+hbmenu-3.6.0.zip ./*; cd ../;
 	rm -rf $(DIST_DIR)
 
